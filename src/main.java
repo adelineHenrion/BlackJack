@@ -1,7 +1,20 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Scanner;
 
 public class main {
     public static void main(String[] args){
+        JFrame frame= new JFrame();
+        JLabel label = new JLabel("\uD83C\uDCAB");
+        label.setFont(new Font("Serif", Font.BOLD, 300));
+        frame.add(label);
+        frame.setSize(500, 500);
+        frame.setVisible(true);
+    }
+
+    static void game(){
         User user = new User("User");
         User bank = new User("Bank", true);
         System.out.println("You have " + user.getCoins() + " enjoy!");
@@ -28,6 +41,5 @@ public class main {
             System.out.println("Game over");
         }
         System.out.println("Game finished. See you soon !");
-
     }
 }
